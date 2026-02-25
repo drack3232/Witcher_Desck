@@ -23,7 +23,7 @@ public class ContractController {
     }
 
     @GetMapping
-    public List<Contract<? extends Monster>> getContracts() {
+    public List<Contract> getContracts() { // <-- Прибрали дженерік
         return contractService.getAllContracts();
     }
 }

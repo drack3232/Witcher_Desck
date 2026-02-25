@@ -1,3 +1,5 @@
+
+
 public abstract class Monster implements Attackable {
     private String name;
     private int health;

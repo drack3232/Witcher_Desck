@@ -1,6 +1,11 @@
 package com.witcher.desck.model;
-
+import jakarta.persistence.*;
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public abstract class Monster implements Attackable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+private Long id;
     private String name;
     private int health;
     private int reward;
@@ -9,6 +14,9 @@ public abstract class Monster implements Attackable {
         this.name = name;
         this.health = health;
         this.reward = reward;
+    }
+
+    protected Monster() {
     }
 
     @Override
