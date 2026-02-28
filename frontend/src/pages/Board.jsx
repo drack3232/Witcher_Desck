@@ -22,7 +22,7 @@ axios.get('http://localhost:8081/api/contracts')
 
 
 return(
-    <div className='app-container'>
+    <div className='app-container contract-grids'>
 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <h1>🗡️ Дошка Відьмацьких Замовлень</h1>
         
@@ -40,6 +40,7 @@ return(
 ) : (
     <div className='contracts-grid'> 
     {contracts.map(contract => (
+        
         <div key={contract.id} className="contract-card">
               <h2>{contract.target.name}</h2>
               <div className="contract-details">

@@ -1,113 +1,153 @@
-/* --- ГЛОБАЛЬНІ СТИЛІ (Темна тема) --- */
+/* =========================================================
+   1. ГЛОБАЛЬНІ НАЛАШТУВАННЯ (БАЗА)
+   ========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Щоб рамки не роздували блоки */
+}
+
+/* Налаштування для Vite/React */
+#root {
+  width: 100%;       /* Розтягуємо на всю доступну ширину */
+  min-height: 100vh; /* Розтягуємо на всю висоту екрана */
+  display: flex;
+  justify-content: center;
+}
+
 body {
-    background-color: #121212;
-    color: #e0e0e0;
-    margin: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0c0c0c; /* Темний фон як на твоїх фото */
+  background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+  color: #e0d1b1; /* Колір старого пергаменту */
+  font-family: 'Crimson Text', serif;
+  overflow-x: hidden;
 }
 
-/* --- СТИЛІ ДЛЯ ЛОГІНУ ТА РЕЄСТРАЦІЇ --- */
+/* =========================================================
+   2. ЦЕНТРУВАННЯ ФОРМ (ЛОГІН/РЕЄСТРАЦІЯ)
+   ========================================================= */
 .auth-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: radial-gradient(circle at center, #2a2a2a 0%, #121212 100%);
-}
-
-.auth-logo {
-    width: 120px;
-    height: auto;
-    display: block;
-    margin: 0 auto 20px auto;
-
-    filter: drop-shadow(0 0 15px rgba(205, 164, 52, 0.5));
+  display: flex;            /* Вмикаємо Flexbox */
+  justify-content: center;  /* Центруємо горизонтально */
+  align-items: center;      /* Центруємо вертикально */
+  min-height: 100vh;        /* Весь екран вертикально */
+  width: 100vw;             /* Тільки так блок займе весь екран горизонтально */
+  background: radial-gradient(circle, #1a1a1a 0%, #000000 100%);
 }
 
 .auth-box {
-    background: #1e1e1e;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border: 1px solid #333;
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
+  background: #151515;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid #3d2c1e; /* Темно-коричнева рамка (дерево) */
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8), 0 0 10px rgba(166, 43, 43, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
 }
 
-.auth-box h1 {
-    color: #cda434; /* Золотий колір */
-    margin-bottom: 30px;
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+/* Натиснута кнопка або ефект наведення (МАГІЯ) */
+.auth-box:hover {
+  border-color: #c69b61; /* Золото */
+  box-shadow: 0 0 25px rgba(166, 43, 43, 0.3);
 }
 
-.input-group {
-    margin-bottom: 20px;
-    text-align: left;
+.auth-box h2 {
+  font-family: 'Uncial Antiqua', serif; /* Якщо використовуєш цей шрифт Відьмака */
+  font-size: 2.5rem;
+  color: #f2e3c9;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+  margin-bottom: 30px;
 }
 
-.input-group label {
-    display: block;
-    margin-bottom: 8px;
-    color: #a0a0a0;
-    font-size: 14px;
+/* СТИЛЬ ДЛЯ ІНПУТІВ І КНОПОК */
+input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background: #1c1c1c;
+  border: 2px solid #2d2118;
+  border-radius: 6px;
+  color: #e0d1b1;
+  font-family: 'Crimson Text', serif;
 }
 
-.input-group input {
-    width: 100%;
-    padding: 12px;
-    background: #2a2a2a;
-    border: 1px solid #444;
-    border-radius: 6px;
-    color: #fff;
-    font-size: 16px;
-    box-sizing: border-box;
-    transition: border-color 0.3s;
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: #7a1515;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
 }
 
-.input-group input:focus {
-    outline: none;
-    border-color: #cda434;
+.auth-box button:hover {
+  background: #a62b2b; /* Червоний як знак Ігні */
 }
 
-.primary-btn {
-    width: 100%;
-    padding: 14px;
-    background-color: #8b0000; /* Темно-червоний */
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition:
-        background-color 0.3s,
-        transform 0.1s;
-    margin-top: 10px;
+/* =========================================================
+   3. ДОШКА ЗАМОВЛЕНЬ (BOARD)
+   ========================================================= */
+.board-container {
+  display: flex;
+  flex-direction: column;   /* Заголовок зверху, картки знизу */
+  align-items: center;      /* Вирівнюємо по центру осі */
+  width: 100vw;
+  min-height: 100vh;
+  padding: 60px 20px;
 }
 
-.primary-btn:hover {
-    background-color: #a50000;
+/* Красивий заголовок дошки */
+.board-header {
+  text-align: center;
+  margin-bottom: 50px;
+  width: 100%;
 }
 
-.primary-btn:active {
-    transform: scale(0.98);
+.board-header h1 {
+  font-size: 3rem;
+  color: #f2e3c9;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
 }
 
-.auth-switch {
-    margin-top: 25px;
-    font-size: 14px;
-    color: #a0a0a0;
+/* Сітка для карток - тепер вона буде рівною */
+.contracts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center; /* Центрує самі колонки */
+  margin: 0 auto;          /* Центрує всю сітку на сторінці */
 }
 
-.auth-switch a {
-    color: #cda434;
-    text-decoration: none;
-    font-weight: bold;
+/* КАРТКА МОНСТРА */
+.contract-card {
+  background: #1c1c1c;
+  border: 2px solid #2d2118;
+  border-radius: 8px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  cursor: pointer;
 }
 
-.auth-switch a:hover {
-    text-decoration: underline;
+.contract-card:hover {
+  transform: translateY(-10px);
+  border-color: #a62b2b;
+  box-shadow: 0 0 25px rgba(166, 43, 43, 0.3);
+}
+
+.reward {
+  font-size: 1.2rem;
+  color: #c69b61; /* Золото */
+  margin-top: 15px;
+  font-weight: bold;
 }

@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Board from './pages/Board';
-import '../App.css';
+import './App.css';
 
 function App() {
   return (

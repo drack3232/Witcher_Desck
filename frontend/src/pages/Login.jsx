@@ -30,7 +30,7 @@ function Login() {
     };
 
     return (
-        <div className="auth-container">
+        <div className="auth-container ">
             <div className="auth-box">
                 <img
                     src="/wolf.png"
