@@ -14,6 +14,11 @@ public class Contract<T> {
     private Monster target;
     private boolean completed;
 
+    @Column(columnDefinition = "TEXT")
+    private String combatTactics;
+
+    private String imageUrl;
+
     public Contract(Long id, String location, Monster target) {
         this.id = id;
         this.location = location;
@@ -27,4 +32,19 @@ public class Contract<T> {
     public String getLocation() { return location; }
     public Monster getTarget() { return target; }
     public boolean isCompleted() { return completed; }
+    public String getCombatTactics() {
+        return combatTactics;
+    }
+
+    public void setCombatTactics(String combatTactics) {
+        this.combatTactics = combatTactics;
+    }
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
 }

@@ -18,7 +18,7 @@ function Login() {
                 password: password,
             })
             .then((response) => {
-                navigate("/board");
+                navigate("/home");
             })
             .catch((error) => {
                 if (error.response) {
