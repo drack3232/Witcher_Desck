@@ -129,6 +129,8 @@ input[type="email"], input[type="password"] {
 
 /* КАРТКА МОНСТРА */
 .contract-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   background: #1c1c1c;
   border: 2px solid #2d2118;
   border-radius: 8px;
@@ -262,12 +264,11 @@ input[type="email"], input[type="password"] {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 70px; /* Ширина бокових колон */
-  /* Темний фон з візерунком, що нагадує кування або руни */
+  width: 70px; 
   background-color: #0c0806;
   background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');
   z-index: 10;
-  pointer-events: none; /* Щоб не заважали клікати */
+  pointer-events: none; 
 }
 
 /* Ліва колона */
@@ -308,7 +309,7 @@ input[type="email"], input[type="password"] {
 /* Ефект "Відьмачого чуття" при наведенні мишкою */
 .location-card:hover {
   transform: scale(1.05);
-  border-color: #c69b61; /* Рамка стає золотою */
+  border-color: #c69b61; 
   box-shadow: 0 15px 40px rgba(198, 155, 97, 0.2), inset 0 0 20px rgba(0,0,0,0.8);
 }
 
@@ -317,22 +318,27 @@ input[type="email"], input[type="password"] {
   height: 250px;
   object-fit: cover;
   border-bottom: 4px solid #3d2c1e;
-  filter: brightness(0.7) contrast(1.2); /* Робимо пейзажі більш похмурими */
+  filter: brightness(0.7) contrast(1.2);
   transition: filter 0.3s ease;
 }
 
 .location-card:hover img {
-  filter: brightness(1.1) contrast(1.2); /* Просвітлюється при наведенні */
+  filter: brightness(1.1) contrast(1.2); 
 }
 
 /* Текст під картинкою локації */
 .location-card h2 {
   font-family: 'Uncial Antiqua', serif;
-  color: #c69b61; /* Золотий колір */
+  color: #c69b61; 
   padding: 20px 0;
   margin: 0;
   font-size: 2rem;
   letter-spacing: 2px;
   text-shadow: 2px 2px 5px #000;
   background: linear-gradient(to bottom, #1a1a1a, #050505);
+}
+.bestiary-card {
+  width: 100%;
+  box-sizing: border-box;
+  /* Якщо в тебе там вже є стилі для .bestiary-card (фони, рамки), просто додай ці два рядки до них, старе не видаляй */
 }

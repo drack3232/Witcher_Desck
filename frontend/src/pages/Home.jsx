@@ -25,7 +25,6 @@ function Home() {
 
       <div className="contracts-grid">
         {locations.map(loc => (
-          /* Змінили клас на location-card і прибрали inline-стилі */
           <div 
             key={loc.id} 
             className="location-card" 
@@ -41,7 +40,7 @@ function Home() {
         <div className="modal-overlay" onClick={() => setSelectedLocation(null)}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>
             
-            /* Додано кнопку-хрестик у верхній кут */
+           
             <button className="close-x-btn" onClick={() => setSelectedLocation(null)}>✖</button>
 
             <h2>{selectedLocation.name}</h2>

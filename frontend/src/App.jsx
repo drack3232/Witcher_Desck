@@ -3,6 +3,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Board from './pages/Board';
 import Home from './pages/Home';
+import Bestiary from './pages/Bestiary';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/board" element={<Board />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/bestiary/:id" element={<Bestiary />} />
       </Routes>
     </Router>
   );

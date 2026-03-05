@@ -1,0 +1,200 @@
+[
+  {
+    "name": "Водна баба",
+    "health": 150,
+    "reward": 250,
+    "description": "Мерзенна істота, що ховається в багнюці та кидається грудками бруду.",
+    "combatTactics": "Використовуйте знак Ігні та Олію проти трупоїдів.",
+    "imageUrl": "/Image/WhaterHag.jpg",
+    "locationId": 1
+  },
+  {
+    "name": "Утопець",
+    "health": 80,
+    "reward": 50,
+    "description": "Мерці, яких поглинула вода. Зустрічаються біля річок та на болотах Велену купками по 3-5 особин.",
+    "combatTactics": "Вразливі до знаку Ігні та Олії проти трупоїдів. Блокуйте їхні стрибки.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Drowner",
+    "locationId": 1
+  },
+  {
+    "name": "Гуль",
+    "health": 100,
+    "reward": 80,
+    "description": "Пожирачі трупів, які злітаються на поля битв Велену як мухи на мед.",
+    "combatTactics": "Швидкі атаки срібним мечем, знак Ігні.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Ghoul",
+    "locationId": 1
+  },
+  {
+    "name": "Альгуль",
+    "health": 200,
+    "reward": 180,
+    "description": "Більший і сильніший родич гуля. Має шипи на спині, якими захищається від ударів.",
+    "combatTactics": "Знак Аксій змушує його сховати шипи. Використовуйте Олію проти трупоїдів.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Alghoul",
+    "locationId": 1
+  },
+  {
+    "name": "Гнилець",
+    "health": 90,
+    "reward": 60,
+    "description": "Трупоїд, що роздувається від трупних газів. Дуже небезпечний перед смертю.",
+    "combatTactics": "Коли його здоров'я падає, він починає трястися — негайно відстрибуйте, бо він вибухне!",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Rotfiend",
+    "locationId": 1
+  },
+  {
+    "name": "Кладовищенська баба",
+    "health": 250,
+    "reward": 200,
+    "description": "Ховається біля старих склепів і цвинтарів. Має довгий язик, яким отруює жертву.",
+    "combatTactics": "Знак Ірден, щоб уповільнити її. Відрубайте язик швидким ударом.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Grave+Hag",
+    "locationId": 1
+  },
+  {
+    "name": "Туманник",
+    "health": 180,
+    "reward": 220,
+    "description": "Ховається в густому тумані на болотах. Може ставати невидимим.",
+    "combatTactics": "Використовуйте знак Ірден — коли він заходить у пастку, то стає видимим.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Foglet",
+    "locationId": 1
+  },
+  {
+    "name": "Полуденниця",
+    "health": 140,
+    "reward": 150,
+    "description": "Привид дівчини, що померла перед весіллям. З'являється в полі опівдні.",
+    "combatTactics": "Бити її можна ТІЛЬКИ коли вона знаходиться всередині пастки Ірден.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Noonwraith",
+    "locationId": 1
+  },
+  {
+    "name": "Опівнічниця",
+    "health": 160,
+    "reward": 170,
+    "description": "Темна сестра полуденниці. Створює свої копії, щоб випити життя з відьмака.",
+    "combatTactics": "Знак Ірден, бомба Місячний пил. Знищуйте копії одним ударом.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Nightwraith",
+    "locationId": 1
+  },
+  {
+    "name": "Біс",
+    "health": 800,
+    "reward": 600,
+    "description": "Гігантський релікт із третім оком, який може гіпнотизувати жертву.",
+    "combatTactics": "Олія проти реліктів, бомба Чортів гриб. Уникайте його таранних атак.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Fiend",
+    "locationId": 1
+  },
+  {
+    "name": "Чорт",
+    "health": 700,
+    "reward": 550,
+    "description": "Менший родич біса, але значно агресивніший і швидший.",
+    "combatTactics": "Олія проти реліктів. Не намагайтеся блокувати його удари, тільки ухиляння.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Chort",
+    "locationId": 1
+  },
+  {
+    "name": "Лісовик",
+    "health": 600,
+    "reward": 500,
+    "description": "Дух лісу. Контролює вовків, ворон і коріння дерев.",
+    "combatTactics": "Дуже вразливий до вогню (знак Ігні та бомба Танцююча зірка).",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Leshen",
+    "locationId": 1
+  },
+  {
+    "name": "Вовкулака",
+    "health": 400,
+    "reward": 350,
+    "description": "Проклята людина, що перетворюється на звіра. Має неймовірну регенерацію.",
+    "combatTactics": "Бомба Місячний пил блокує його регенерацію здоров'я. Знак Ігні.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Werewolf",
+    "locationId": 1
+  },
+  {
+    "name": "Ігоша",
+    "health": 300,
+    "reward": 0,
+    "description": "Монстр, що народжується з ненародженої і непохованої дитини. Може перетворитися на чура.",
+    "combatTactics": "Знак Аксій, щоб заспокоїти його. Якщо розлютити — перетвориться на гігантського монстра.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Botchling",
+    "locationId": 1
+  },
+  {
+    "name": "Виверна",
+    "health": 450,
+    "reward": 300,
+    "description": "Крилата бестія, яку часто плутають з драконами. Атакує з повітря.",
+    "combatTactics": "Збивайте її на землю арбалетом або знаком Аард. Олія проти драконідів.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Wyvern",
+    "locationId": 1
+  },
+  {
+    "name": "Королівська виверна",
+    "health": 550,
+    "reward": 450,
+    "description": "Більша і набагато небезпечніша виверна з отруйним хвостом.",
+    "combatTactics": "Пийте еліксир Іволга від отрути. Збивайте на землю Картеччю.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Royal+Wyvern",
+    "locationId": 1
+  },
+  {
+    "name": "Гриф",
+    "health": 500,
+    "reward": 400,
+    "description": "Суміш орла та лева. Атакує кігтями і крилами, викликаючи кровотечу.",
+    "combatTactics": "Арбалет, щоб збити з неба. Знак Аард і Олія проти гібридів.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Griffin",
+    "locationId": 1
+  },
+  {
+    "name": "Василіск",
+    "health": 480,
+    "reward": 380,
+    "description": "Отруйний драконід. Хоч він і не вбиває поглядом, його отрута смертельна.",
+    "combatTactics": "Еліксир Іволга обов'язковий. Олія проти драконідів і знак Аард.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Basilisk",
+    "locationId": 1
+  },
+  {
+    "name": "Ендріга-воїн",
+    "health": 220,
+    "reward": 100,
+    "description": "Величезний інсектоїд. Воїни захищають колонію і мають булавоподібний хвіст.",
+    "combatTactics": "Олія проти інсектоїдів. Ухиляйтеся від стрибків і випадів хвостом.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Endrega+Warrior",
+    "locationId": 1
+  },
+  {
+    "name": "Главол",
+    "health": 350,
+    "reward": 250,
+    "description": "Гігантський павукоподібний інсектоїд, що ховається в коконах або під землею.",
+    "combatTactics": "Знак Ігні чудово палить їхні панцири. Олія проти інсектоїдів.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Arachas",
+    "locationId": 1
+  },
+  {
+    "name": "Катакан",
+    "health": 300,
+    "reward": 450,
+    "description": "Вищий вампір, що живиться кров'ю та ховається в тінях міських вулиць.",
+    "combatTactics": "Знак Ірден, Бомба Місячний пил та Олія проти вампірів.",
+    "imageUrl": "/Image/Katakan.jpg",
+    "locationId": 2
+  },
+  {
+    "name": "Крижаний велетень",
+    "health": 800,
+    "reward": 1000,
+    "description": "Древнє чудовисько з острова Ундвік, що вбило всю команду Яльмара.",
+    "combatTactics": "Знак Квен та Олія проти огрів. Уникайте його могутніх ударів.",
+    "imageUrl": "https://static.wikia.nocookie.net/witcher/images/6/6f/Tw3_card_art_monsters_ice_giant.png",
+    "locationId": 3
+  }
+]
