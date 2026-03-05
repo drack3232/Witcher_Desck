@@ -60,8 +60,7 @@ body {
   margin-bottom: 30px;
 }
 
-/* СТИЛЬ ДЛЯ ІНПУТІВ І КНОПОК */
-input[type="email"], input[type="password"] {
+input[type="text"], [type="email"], input[type="password"] {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
@@ -85,16 +84,14 @@ input[type="email"], input[type="password"] {
 }
 
 .auth-box button:hover {
-  background: #a62b2b; /* Червоний як знак Ігні */
+  background: #a62b2b; 
 }
 
-/* =========================================================
-   3. ДОШКА ЗАМОВЛЕНЬ (BOARD)
-   ========================================================= */
+
 .board-container {
   display: flex;
-  flex-direction: column;   /* Заголовок зверху, картки знизу */
-  align-items: center;      /* Вирівнюємо по центру осі */
+  flex-direction: column;  
+  align-items: center;      
   width: 100vw;
   min-height: 100vh;
   padding: 60px 20px;
@@ -116,15 +113,14 @@ input[type="email"], input[type="password"] {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
 }
 
-/* Сітка для карток - тепер вона буде рівною */
 .contracts-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
   width: 100%;
   max-width: 1200px;
-  justify-content: center; /* Центрує самі колонки */
-  margin: 0 auto;          /* Центрує всю сітку на сторінці */
+  justify-content: center; 
+  margin: 0 auto;          
 }
 
 /* КАРТКА МОНСТРА */
@@ -148,7 +144,7 @@ input[type="email"], input[type="password"] {
 
 .reward {
   font-size: 1.2rem;
-  color: #c69b61; /* Золото */
+  color: #c69b61; 
   margin-top: 15px;
   font-weight: bold;
 }
@@ -180,7 +176,6 @@ input[type="email"], input[type="password"] {
   transform: rotate(15deg);
   z-index: 10;
 }
-/* Модальне вікно (Popup) */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -271,29 +266,21 @@ input[type="email"], input[type="password"] {
   pointer-events: none; 
 }
 
-/* Ліва колона */
 .board-container::before {
   left: 0;
   border-right: 4px solid #3d2c1e; /* Колір темної бронзи */
   box-shadow: inset 0 0 20px #000, 10px 0 20px rgba(0,0,0,0.8);
 }
 
-/* Права колона */
 .board-container::after {
   right: 0;
   border-left: 4px solid #3d2c1e;
   box-shadow: inset 0 0 20px #000, -10px 0 20px rgba(0,0,0,0.8);
 }
-
-
-/* =========================================================
-   КАРТКИ ЛОКАЦІЙ (МАСИВНІ РАМКИ)
-   ========================================================= */
 .location-card {
   display: flex;
   flex-direction: column;
   background: #111;
-  /* Подвійна масивна рамка (бронза + темне залізо) */
   border: 5px solid #4a3b2c; 
   outline: 2px solid #1a1a1a;
   outline-offset: -7px;
@@ -306,7 +293,6 @@ input[type="email"], input[type="password"] {
   position: relative;
 }
 
-/* Ефект "Відьмачого чуття" при наведенні мишкою */
 .location-card:hover {
   transform: scale(1.05);
   border-color: #c69b61; 
@@ -326,7 +312,6 @@ input[type="email"], input[type="password"] {
   filter: brightness(1.1) contrast(1.2); 
 }
 
-/* Текст під картинкою локації */
 .location-card h2 {
   font-family: 'Uncial Antiqua', serif;
   color: #c69b61; 
@@ -340,5 +325,19 @@ input[type="email"], input[type="password"] {
 .bestiary-card {
   width: 100%;
   box-sizing: border-box;
-  /* Якщо в тебе там вже є стилі для .bestiary-card (фони, рамки), просто додай ці два рядки до них, старе не видаляй */
+  height: 100%;
+}
+.monster-img-aside {
+  width: 100%;
+  height: 300px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.monster-img-aside img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ВАЖЛИВО! contain вмістить монстра цілком, не обрізаючи йому голову чи лапи */
 }

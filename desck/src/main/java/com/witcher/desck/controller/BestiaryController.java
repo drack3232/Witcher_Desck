@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:5173") // Дозвіл для React
+@CrossOrigin(origins = "http://localhost:5173")
 public class BestiaryController {
 
     @Autowired
@@ -27,7 +27,6 @@ public class BestiaryController {
 
     @PostMapping("/locations/{id}/monsters")
     public Monster addMonster(@PathVariable Long id, @RequestBody Monster newMonster) {
-        // Шукаємо локацію в базі
         Location location = locationRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Локацію не знайдено"));
 

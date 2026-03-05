@@ -14,7 +14,7 @@
     "reward": 50,
     "description": "Мерці, яких поглинула вода. Зустрічаються біля річок та на болотах Велену купками по 3-5 особин.",
     "combatTactics": "Вразливі до знаку Ігні та Олії проти трупоїдів. Блокуйте їхні стрибки.",
-    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Drowner",
+    "imageUrl": "/Image/drawner.jpg",
     "locationId": 1
   },
   {
@@ -23,7 +23,7 @@
     "reward": 80,
     "description": "Пожирачі трупів, які злітаються на поля битв Велену як мухи на мед.",
     "combatTactics": "Швидкі атаки срібним мечем, знак Ігні.",
-    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Ghoul",
+    "imageUrl": "/Image/Ghoul.jpg",
     "locationId": 1
   },
   {
@@ -32,7 +32,7 @@
     "reward": 180,
     "description": "Більший і сильніший родич гуля. Має шипи на спині, якими захищається від ударів.",
     "combatTactics": "Знак Аксій змушує його сховати шипи. Використовуйте Олію проти трупоїдів.",
-    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Alghoul",
+    "imageUrl": "/Image/Alpha-Ghoul.jpg",
     "locationId": 1
   },
   {
@@ -41,7 +41,7 @@
     "reward": 60,
     "description": "Трупоїд, що роздувається від трупних газів. Дуже небезпечний перед смертю.",
     "combatTactics": "Коли його здоров'я падає, він починає трястися — негайно відстрибуйте, бо він вибухне!",
-    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Rotfiend",
+    "imageUrl": "/Image/Routfield.jpg",
     "locationId": 1
   },
   {
@@ -50,7 +50,7 @@
     "reward": 200,
     "description": "Ховається біля старих склепів і цвинтарів. Має довгий язик, яким отруює жертву.",
     "combatTactics": "Знак Ірден, щоб уповільнити її. Відрубайте язик швидким ударом.",
-    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Grave+Hag",
+    "imageUrl": "/Image/grave-hag.jpg",
     "locationId": 1
   },
   {
@@ -59,7 +59,7 @@
     "reward": 220,
     "description": "Ховається в густому тумані на болотах. Може ставати невидимим.",
     "combatTactics": "Використовуйте знак Ірден — коли він заходить у пастку, то стає видимим.",
-    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Foglet",
+    "imageUrl": "/Image/foglet.jpg",
     "locationId": 1
   },
   {
@@ -68,7 +68,7 @@
     "reward": 150,
     "description": "Привид дівчини, що померла перед весіллям. З'являється в полі опівдні.",
     "combatTactics": "Бити її можна ТІЛЬКИ коли вона знаходиться всередині пастки Ірден.",
-    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Noonwraith",
+    "imageUrl": "/Image/noonwraith.jpg",
     "locationId": 1
   },
   {
@@ -77,7 +77,7 @@
     "reward": 170,
     "description": "Темна сестра полуденниці. Створює свої копії, щоб випити життя з відьмака.",
     "combatTactics": "Знак Ірден, бомба Місячний пил. Знищуйте копії одним ударом.",
-    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Nightwraith",
+    "imageUrl": "/Image/nightwraith.jpg",
     "locationId": 1
   },
   {
@@ -86,7 +86,7 @@
     "reward": 600,
     "description": "Гігантський релікт із третім оком, який може гіпнотизувати жертву.",
     "combatTactics": "Олія проти реліктів, бомба Чортів гриб. Уникайте його таранних атак.",
-    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Fiend",
+    "imageUrl": "/Image/fiend.jpg",
     "locationId": 1
   },
   {
@@ -95,7 +95,7 @@
     "reward": 550,
     "description": "Менший родич біса, але значно агресивніший і швидший.",
     "combatTactics": "Олія проти реліктів. Не намагайтеся блокувати його удари, тільки ухиляння.",
-    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Chort",
+    "imageUrl": "/Image/chort.jpg",
     "locationId": 1
   },
   {
@@ -104,7 +104,7 @@
     "reward": 500,
     "description": "Дух лісу. Контролює вовків, ворон і коріння дерев.",
     "combatTactics": "Дуже вразливий до вогню (знак Ігні та бомба Танцююча зірка).",
-    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Leshen",
+    "imageUrl": "/Image/Leshen.jpg",
     "locationId": 1
   },
   {
@@ -113,7 +113,7 @@
     "reward": 350,
     "description": "Проклята людина, що перетворюється на звіра. Має неймовірну регенерацію.",
     "combatTactics": "Бомба Місячний пил блокує його регенерацію здоров'я. Знак Ігні.",
-    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Werewolf",
+    "imageUrl": "/Image/werewolf.jpg",
     "locationId": 1
   },
   {
@@ -122,7 +122,7 @@
     "reward": 0,
     "description": "Монстр, що народжується з ненародженої і непохованої дитини. Може перетворитися на чура.",
     "combatTactics": "Знак Аксій, щоб заспокоїти його. Якщо розлютити — перетвориться на гігантського монстра.",
-    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Botchling",
+    "imageUrl": "/Image/botchling.jpg",
     "locationId": 1
   },
   {
@@ -131,7 +131,7 @@
     "reward": 300,
     "description": "Крилата бестія, яку часто плутають з драконами. Атакує з повітря.",
     "combatTactics": "Збивайте її на землю арбалетом або знаком Аард. Олія проти драконідів.",
-    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Wyvern",
+    "imageUrl": "/Image/wywern.jpg",
     "locationId": 1
   },
   {
@@ -140,7 +140,7 @@
     "reward": 450,
     "description": "Більша і набагато небезпечніша виверна з отруйним хвостом.",
     "combatTactics": "Пийте еліксир Іволга від отрути. Збивайте на землю Картеччю.",
-    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Royal+Wyvern",
+    "imageUrl": "/Image/royalwyvern.jpg",
     "locationId": 1
   },
   {
@@ -149,7 +149,7 @@
     "reward": 400,
     "description": "Суміш орла та лева. Атакує кігтями і крилами, викликаючи кровотечу.",
     "combatTactics": "Арбалет, щоб збити з неба. Знак Аард і Олія проти гібридів.",
-    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Griffin",
+    "imageUrl": "/Image/griffin.jpg",
     "locationId": 1
   },
   {
@@ -158,7 +158,7 @@
     "reward": 380,
     "description": "Отруйний драконід. Хоч він і не вбиває поглядом, його отрута смертельна.",
     "combatTactics": "Еліксир Іволга обов'язковий. Олія проти драконідів і знак Аард.",
-    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Basilisk",
+    "imageUrl": "/Image/basilisk.jpg",
     "locationId": 1
   },
   {
@@ -167,7 +167,7 @@
     "reward": 100,
     "description": "Величезний інсектоїд. Воїни захищають колонію і мають булавоподібний хвіст.",
     "combatTactics": "Олія проти інсектоїдів. Ухиляйтеся від стрибків і випадів хвостом.",
-    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Endrega+Warrior",
+    "imageUrl": "/Image/endrega_warior.jpg",
     "locationId": 1
   },
   {
@@ -176,7 +176,7 @@
     "reward": 250,
     "description": "Гігантський павукоподібний інсектоїд, що ховається в коконах або під землею.",
     "combatTactics": "Знак Ігні чудово палить їхні панцири. Олія проти інсектоїдів.",
-    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Arachas",
+    "imageUrl": "/Image/arachas.jpg",
     "locationId": 1
   },
   {
@@ -194,7 +194,178 @@
     "reward": 1000,
     "description": "Древнє чудовисько з острова Ундвік, що вбило всю команду Яльмара.",
     "combatTactics": "Знак Квен та Олія проти огрів. Уникайте його могутніх ударів.",
-    "imageUrl": "https://static.wikia.nocookie.net/witcher/images/6/6f/Tw3_card_art_monsters_ice_giant.png",
+    "imageUrl": "/Image/ice_veleten.jpg",
+    "locationId": 3
+  },
+  {
+    "name": "Екіма",
+    "health": 300,
+    "reward": 350,
+    "description": "Жорстокий і швидкий вампір, що нагадує гігантського кажана. Часто ховається у підземеллях під містом.",
+    "combatTactics": "Знак Ігні чудово палить її шерсть. Олія проти вампірів обов'язкова.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Ekimmara",
+    "locationId": 2
+  },
+  {
+    "name": "Сукуб",
+    "health": 200,
+    "reward": 250,
+    "description": "Гібрид, що зваблює чоловіків. У Новіграді вони часто мирні, але якщо розлютити — б'ються вогнем і копитами.",
+    "combatTactics": "Швидкі удари срібним мечем, знак Квен для захисту від магії.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Succubus",
+    "locationId": 2
+  },
+  {
+    "name": "Доплер",
+    "health": 150,
+    "reward": 300,
+    "description": "Релікт, здатний приймати форму і мислення будь-якої істоти. Ховаються серед людей у великих містах.",
+    "combatTactics": "У бою використовують вашу ж зброю і тактику. Бийте швидко, не давайте їм контратакувати.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Doppler",
+    "locationId": 2
+  },
+  {
+    "name": "Ґолем",
+    "health": 600,
+    "reward": 450,
+    "description": "Бездушна кам'яна машина, створена магами. Часто охороняють таємні лабораторії в Новіграді.",
+    "combatTactics": "Знак Аард і Квен. Використовуйте двимеритові бомби, щоб послабити його магію.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Golem",
+    "locationId": 2
+  },
+  {
+    "name": "Ґаргулья",
+    "health": 550,
+    "reward": 500,
+    "description": "Ожила кам'яна статуя. Може кидатися камінням і стрибати на величезні відстані.",
+    "combatTactics": "Олія проти конструктів і двимеритові бомби. Відстрибуйте, коли вона злітає.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Gargoyle",
+    "locationId": 2
+  },
+  {
+    "name": "Зеугль",
+    "health": 400,
+    "reward": 380,
+    "description": "Потвора, що живе в стічних водах і каналізаціях Новіграда. Атакує численними щупальцями.",
+    "combatTactics": "Відрубуйте щупальця, щоб змусити його показати голову. Знак Ігні.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Zeugl",
+    "locationId": 2
+  },
+  {
+    "name": "Фледер",
+    "health": 250,
+    "reward": 200,
+    "description": "Нижчий вампір, що виглядає як жахливий нетопир-переросток. Неймовірно сильний фізично.",
+    "combatTactics": "Олія проти вампірів. Знак Квен врятує від його смертоносних стрибків.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Fleder",
+    "locationId": 2
+  },
+  {
+    "name": "Гаркаїн",
+    "health": 280,
+    "reward": 220,
+    "description": "Ще один вид нижчих вампірів, здатний оглушати жертву ментальними хвилями.",
+    "combatTactics": "Знак Самум (бомба), щоб засліпити його. Намагайтеся триматися збоку або ззаду.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Garkain",
+    "locationId": 2
+  },
+  {
+    "name": "Елементаль вогню",
+    "health": 650,
+    "reward": 550,
+    "description": "Скупчення чистої вогняної магії, яке колись створив могутній чародій.",
+    "combatTactics": "Знак Аард гасить його полум'я. Ніколи не використовуйте Ігні!",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Fire+Elemental",
+    "locationId": 2
+  },
+  {
+    "name": "Крижаний велетень",
+    "health": 1200,
+    "reward": 1000,
+    "description": "Древнє чудовисько з острова Ундвік. Використовує корабельні якорі як зброю.",
+    "combatTactics": "Знак Квен та Олія проти огрів. Уникайте його могутніх розмашистих ударів.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Ice+Giant",
+    "locationId": 3
+  },
+  {
+    "name": "Циклоп",
+    "health": 900,
+    "reward": 800,
+    "description": "Гігант з одним оком, що живе в горах Скелліге. Надзвичайно сильний і територіальний.",
+    "combatTactics": "Цільтеся в око з арбалета, щоб оглушити. Олія проти огрів.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Cyclops",
+    "locationId": 3
+  },
+  {
+    "name": "Сирена",
+    "health": 150,
+    "reward": 100,
+    "description": "Крилата бестія, що заманює моряків співом, а потім розриває на шматки.",
+    "combatTactics": "Використовуйте арбалет або знак Аард, щоб збити її в море або на землю.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Siren",
+    "locationId": 3
+  },
+  {
+    "name": "Ехидна",
+    "health": 200,
+    "reward": 180,
+    "description": "Старіша і набагато небезпечніша версія сирени. Легко перевертає невеликі човни.",
+    "combatTactics": "Ріг Хольгера Чорнорукого або знак Аард скине її на землю.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Ekhidna",
+    "locationId": 3
+  },
+  {
+    "name": "Еринія",
+    "health": 250,
+    "reward": 220,
+    "description": "Найагресивніший вид гібридів на островах. Часто нападають зграями і крадуть овець.",
+    "combatTactics": "Збивайте їх на землю і використовуйте Олію проти гібридів.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Erynia",
+    "locationId": 3
+  },
+  {
+    "name": "Крижаний троль",
+    "health": 600,
+    "reward": 400,
+    "description": "Дикі тролі Скелліге, покриті шаром льоду і снігу. Не такі розумні, як континентальні, але дуже злі.",
+    "combatTactics": "Знак Ігні чудово працює проти їхньої крижаної броні. Олія проти огрів.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Ice+Troll",
+    "locationId": 3
+  },
+  {
+    "name": "Берсерк",
+    "health": 450,
+    "reward": 500,
+    "description": "Людина, що під дією грибів і магії перетворюється на гігантського ведмедя-вбивцю.",
+    "combatTactics": "Олія проти проклятих, знак Ігні. Уникайте їхніх розлючених таранних атак.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Berserker",
+    "locationId": 3
+  },
+  {
+    "name": "Морська баба",
+    "health": 250,
+    "reward": 180,
+    "description": "Різновид водяної баби, адаптований до суворих умов океану навколо Скелліге.",
+    "combatTactics": "Знак Ігні та Олія проти трупоїдів. Обережно, вона швидко плаває.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Bilge+Hag",
+    "locationId": 3
+  },
+  {
+    "name": "Білий вовк",
+    "health": 120,
+    "reward": 50,
+    "description": "Великі полярні вовки Скелліге. Завжди нападають великими зграями.",
+    "combatTactics": "Знак Ігні та Аард для контролю натовпу. Олія проти звірів.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=White+Wolf",
+    "locationId": 3
+  },
+  {
+    "name": "Моркварґ (Проклятий)",
+    "health": 700,
+    "reward": 600,
+    "description": "Пірат, якого прокляли на вічний голод і перетворили на безсмертного вовкулаку.",
+    "combatTactics": "Бомба Місячний пил зупинить його регенерацію. Знак Ігні.",
+    "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Morkvarg",
     "locationId": 3
   }
 ]

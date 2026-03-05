@@ -20,7 +20,6 @@ const [newMonster, setNewMonster] = useState({
 });
 
   useEffect(() => {
-    // Робимо запит до нашого нового API
     axios.get(`http://localhost:8081/api/locations/${id}/monsters`)
       .then(response => {
         setMonsters(response.data);
@@ -37,9 +36,7 @@ const handleSubmit = (e) => {
   
   axios.post(`http://localhost:8081/api/locations/${id}/monsters`, newMonster)
     .then(response => {
-      // Додаємо нового монстра до існуючого списку на екрані
       setMonsters([...monsters, response.data]);
-      // Очищаємо форму і ховаємо її
       setNewMonster({ name: '', description: '', combatTactics: '', reward: 0, imageUrl: '' });
       setShowForm(false);
     })
@@ -82,9 +79,7 @@ const handleSubmit = (e) => {
                   <p>{monster.combatTactics}</p>
                 </div>
                 
-                <div className="reward-tag">
-                  Нагорода за голову: {monster.reward} крон
-                </div>
+               
               </div>
             </div>
           ))}

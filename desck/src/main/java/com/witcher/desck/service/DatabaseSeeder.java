@@ -24,7 +24,6 @@ public class DatabaseSeeder implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        // Запускаємо логіку тільки якщо база порожня
         if (locationRepository.count() == 0) {
 
             Location velen = new Location();
@@ -42,36 +41,44 @@ public class DatabaseSeeder implements CommandLineRunner {
             locationRepository.save(velen);
             locationRepository.save(novigrad);
             locationRepository.save(skellige);
-
+        }
             // 2. Читаємо наш JSON файл
             ObjectMapper mapper = new ObjectMapper();
             InputStream inputStream = getClass().getResourceAsStream("/monsters.json");
 
             if (inputStream != null) {
-                // Розбираємо JSON на об'єкти
                 JsonNode jsonNode = mapper.readTree(inputStream);
 
                 for (JsonNode node : jsonNode) {
-                    Monster monster = new Monster();
+                    String monsterName = node.get("name").asText();
+                    Monster monster = monsterRepository.findByname(monsterName);
+
+                    if(monster == null){
+                        monster = new Monster();
+
+                    }
+
                     monster.setName(node.get("name").asText());
                     monster.setHealth(node.get("health").asInt());
-                    monster.setReward(node.get("reward").asInt());
                     monster.setDescription(node.get("description").asText());
                     monster.setCombatTactics(node.get("combatTactics").asText());
                     monster.setImageUrl(node.get("imageUrl").asText());
 
-                    // Зв'язуємо монстра з локацією по ID
                     Long locId = node.get("locationId").asLong();
-                    Location location = locationRepository.findById(locId).orElse(velen); // Захист: якщо ID не знайдено, кидаємо у Велен
-                    monster.setLocation(location);
+                    Location location = locationRepository.findById(locId).orElse(null);
+                    if(location != null) {
+                        monster.setLocation(location);
+                        monsterRepository.save(monster);
+                    } else {
+                        System.out.println("⚠️ Пропущено: Локацію з ID " + locId + " не знайдено для монстра " + monsterName);
+                    }
 
-                    // Зберігаємо монстра в базу
-                    monsterRepository.save(monster);
+
                 }
+
                 System.out.println("⚔️ База даних успішно наповнена з JSON!");
             } else {
                 System.out.println("⚠️ Файл monsters.json не знайдено!");
             }
         }
     }
-}
