@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../App.css'; // Змінив на одну крапку, щоб точно не було помилки імпорту
+import '../App.css'; 
 
 function Home() {
   const navigate = useNavigate();
@@ -41,18 +41,20 @@ function Home() {
           <div className="modal-content" onClick={e => e.stopPropagation()}>
             
            
-            <button className="close-x-btn" onClick={() => setSelectedLocation(null)}>✖</button>
 
             <h2>{selectedLocation.name}</h2>
             <p>Що ви хочете дослідити у цьому регіоні?</p>
             
             <div className="modal-actions">
-              <button className="primary-btn" onClick={() => navigate(`/history/${selectedLocation.id}`)}>
-                📜 Історія локації
-              </button>
+ <button className="close-x-btn" onClick={() => setSelectedLocation(null)}>✖</button>
+              <button onClick={() => navigate('/history')} className="primary-btn" >
+  ⏳ Читати Літопис
+</button>
               <button className="primary-btn" onClick={() => navigate(`/bestiary/${selectedLocation.id}`)}>
                 🐺 Бестіарій локації
               </button>
+                         
+
             </div>
           </div>
         </div>
@@ -65,6 +67,8 @@ function Home() {
       >
         Вийти з шинку
       </button>
+
+      
     </div>
   );
 }

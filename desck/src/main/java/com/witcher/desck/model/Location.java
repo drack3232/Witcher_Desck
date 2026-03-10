@@ -27,7 +27,6 @@ public Location(){}
     @JsonIgnore
     private List<Monster> monsters;
 
-    // Getters та Setters
     public Long getId() {
         return id;
     }

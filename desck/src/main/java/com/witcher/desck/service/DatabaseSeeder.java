@@ -42,7 +42,6 @@ public class DatabaseSeeder implements CommandLineRunner {
             locationRepository.save(novigrad);
             locationRepository.save(skellige);
         }
-            // 2. Читаємо наш JSON файл
             ObjectMapper mapper = new ObjectMapper();
             InputStream inputStream = getClass().getResourceAsStream("/monsters.json");
 

@@ -10,6 +10,8 @@ function Bestiary() {
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
   const isAdmin = localStorage.getItem('userRole') === 'admin';
+  const [selectedMonster, setSelectedMonster] = useState(null);
+  const closeModal = () => setSelectedMonster(null);
 const [newMonster, setNewMonster] = useState({
   name: '',
   health: 100,
@@ -54,36 +56,71 @@ const handleSubmit = (e) => {
 
      
 
-      {/* Твій список монстрів */}
       {loading ? (
         <h2 style={{ color: '#c69b61', textAlign: 'center' }}>Досліджуємо записи...</h2>
       ) : monsters.length === 0 ? (
         <h2 style={{ color: '#c69b61', textAlign: 'center' }}>У цьому регіоні поки що спокійно.</h2>
       ) : (
-        <div className="contracts-grid" style={{ display: 'grid', flexDirection: 'column', alignItems: 'center', gap: '100px' }}> 
-          {monsters.map(monster => (
-            <div key={monster.id} className="bestiary-card">
-              <div className="wax-seal">W</div>
+        <> 
+          <div className="contracts-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px', justifyContent: 'center' }}> 
+            {monsters.map(monster => (
               
-              <div className="monster-img-aside">
-                <img src={monster.imageUrl || "/placeholder.jpg"} alt={monster.name} />
-              </div>
-              
-              <div className="monster-content">
-                <h2>{monster.name}</h2>
+              <div 
+                key={monster.id} 
+                className="bestiary-card" 
+                onClick={() => setSelectedMonster(monster)} 
+                style={{ cursor: 'pointer' }} 
+              >
+                <div className="wax-seal">W</div>
                 
-                <p className="description">"{monster.description}"</p>
-                
-                <div className="tactics-box">
-                  <h4>⚔️ Майстерність бою:</h4>
-                  <p>{monster.combatTactics}</p>
+                <div className="monster-img-aside">
+                  <img src={monster.imageUrl || "/placeholder.jpg"} alt={monster.name} />
                 </div>
                 
-               
+                <div className="monster-content">
+                  <h2 style={{ textAlign: 'center' }}>{monster.name}</h2>
+                  
+                  {/* Закоментовано, щоб картки були акуратнішими. Весь текст тепер у модалці! */}
+                  {/* <p className="description">"{monster.description}"</p> */}
+                  {/* <div className="tactics-box"> ... </div> */}
+                </div>
+              </div>
+            ))}
+          </div>
+
+         
+          {selectedMonster && (
+            <div className="modal-overlay" onClick={closeModal}>
+              <div className="monster-modal-content" onClick={(e) => e.stopPropagation()}>
+                
+                <button className="close-btn" onClick={closeModal}>✖</button>
+                
+                <div className="monster-modal-body">
+                  <div className="monster-modal-left">
+                    <img src={selectedMonster.imageUrl || "/placeholder.jpg"} alt={selectedMonster.name} />
+                    <div className="combat-tactics">
+                      <h4>⚔️ Майстерність бою:</h4>
+                      <p>{selectedMonster.combatTactics}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="monster-modal-right">
+                    <h2>{selectedMonster.name}</h2>
+                    <div className="monster-stats">
+                      <span>❤️ Здоров'я: {selectedMonster.health}</span>
+                      <span>💰 Нагорода: {selectedMonster.reward} крон</span>
+                    </div>
+                    <div className="monster-description">
+                      <h4>📜 З нотаток відьмака:</h4>
+                      <p>{selectedMonster.description}</p>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
-          ))}
-        </div>
+          )}
+        </>
       )}
     </div>
   );
