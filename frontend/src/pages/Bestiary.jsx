@@ -12,6 +12,9 @@ function Bestiary() {
   const isAdmin = localStorage.getItem('userRole') === 'admin';
   const [selectedMonster, setSelectedMonster] = useState(null);
   const closeModal = () => setSelectedMonster(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [ambientSound, setAmbientSound] = useState(null);
+
 const [newMonster, setNewMonster] = useState({
   name: '',
   health: 100,
@@ -21,18 +24,56 @@ const [newMonster, setNewMonster] = useState({
   imageUrl: ''
 });
 
+const playClickSound = () => {
+  const audio = new Audio('/sounds/paper.mp3');
+  audio.play();
+}
+const openModal = (monster) => {
+    setSelectedMonster(monster);
+    playClickSound(); 
+  };
+  
+
   useEffect(() => {
     axios.get(`http://localhost:8081/api/locations/${id}/monsters`)
       .then(response => {
         setMonsters(response.data);
         setLoading(false);
+      
+    
       })
       .catch(error => {
         console.error("Помилка зв'язку з бекендом:", error);
         setLoading(false);
       });
   }, [id]);
-
+useEffect(() => {
+  let trackPath = '/sounds/Kaer_Morhen.mp3';
+  if (id === 1 || id === '1') trackPath = '/sounds/velen.mp3';
+    else if (id === 2 || id === '2') trackPath = '/sounds/novigrad.mp3';
+    else if (id === 3 || id === '3') trackPath = '/sounds/skellige.mp3';
+    // Налаштовуємо звук
+    const audio = new Audio(trackPath);
+    audio.loop = true;
+    audio.volume = 0.2;
+setAmbientSound(audio);
+if (isPlaying) {
+      audio.play().catch(e => console.log("Браузер блокує автоплей", e));
+    }
+    
+    return () => {
+      audio.pause();
+      audio.src = ''; 
+    };
+  }, [id])
+const toggleAmbient = () => {
+    if (isPlaying) {
+      ambientSound.pause();
+    } else {
+      ambientSound.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
 const handleSubmit = (e) => {
   e.preventDefault();
   
@@ -52,6 +93,13 @@ const handleSubmit = (e) => {
         <button onClick={() => navigate('/home')} className="primary-btn">
           ⬅ Повернутися до карти
         </button>
+        <button 
+  onClick={toggleAmbient} 
+  className="primary-btn" 
+  style={{ marginBottom: '20px', background: isPlaying ? '#8b0000' : '#1a1a1a' }}
+>
+  {isPlaying ? '🔇 Вимкнути ембієнт' : '🎵 Відчути атмосферу'}
+</button>
       </div>
 
      
@@ -108,7 +156,6 @@ const handleSubmit = (e) => {
                     <h2>{selectedMonster.name}</h2>
                     <div className="monster-stats">
                       <span>❤️ Здоров'я: {selectedMonster.health}</span>
-                      <span>💰 Нагорода: {selectedMonster.reward} крон</span>
                     </div>
                     <div className="monster-description">
                       <h4>📜 З нотаток відьмака:</h4>

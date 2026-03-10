@@ -8,7 +8,7 @@ function History() {
   return (
     <div className="board-container">
       <div className="board-header">
-        <h1>⏳ Стародавній Літопис</h1>
+        <h1>⏳ Лор </h1>
         <button onClick={() => navigate('/home')} className="primary-btn">
           ⬅ Повернутися до карти
         </button>

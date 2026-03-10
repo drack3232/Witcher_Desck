@@ -47,9 +47,7 @@ function Home() {
             
             <div className="modal-actions">
  <button className="close-x-btn" onClick={() => setSelectedLocation(null)}>✖</button>
-              <button onClick={() => navigate('/history')} className="primary-btn" >
-  ⏳ Читати Літопис
-</button>
+    
               <button className="primary-btn" onClick={() => navigate(`/bestiary/${selectedLocation.id}`)}>
                 🐺 Бестіарій локації
               </button>
@@ -57,9 +55,12 @@ function Home() {
 
             </div>
           </div>
+          
         </div>
       )}
-      
+                <button onClick={() => navigate('/history')} className="primary-btn"  style={{ marginTop: '40px' }}>
+  ⏳ Лор Неверленду
+</button>
       <button 
         onClick={() => navigate('/login')} 
         className="primary-btn"

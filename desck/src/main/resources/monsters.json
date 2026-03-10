@@ -367,5 +367,15 @@
     "combatTactics": "Бомба Місячний пил зупинить його регенерацію. Знак Ігні.",
     "imageUrl": "https://placehold.co/400x600/1a1a1a/c69b61?text=Morkvarg",
     "locationId": 3
+  },
+  {
+    "name": "Блядник",
+    "health": 99999,
+    "reward": 6100,
+    "description": "Голодний відьмак. Шукає молодиць із 1 курсу і мілфочок на порші чи бесі",
+    "combatTactics": "Щоб його зупинити треба визвати Богуса. Або використати Блєдного монстра ",
+    "imageUrl": "/Image/Bled.jpg",
+    "locationId": 1
+
   }
 ]
