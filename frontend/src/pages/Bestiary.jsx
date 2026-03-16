@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import {  GiCoins, GiCrossedSwords, GiScrollUnfurled, GiMagicSwirl, GiDrop } from "react-icons/gi";
 import axios from 'axios';
 import '../App.css'; 
 
@@ -146,21 +147,63 @@ const handleSubmit = (e) => {
                 <div className="monster-modal-body">
                   <div className="monster-modal-left">
                     <img src={selectedMonster.imageUrl || "/placeholder.jpg"} alt={selectedMonster.name} />
-                    <div className="combat-tactics">
-                      <h4>⚔️ Майстерність бою:</h4>
-                      <p>{selectedMonster.combatTactics}</p>
-                    </div>
+       {selectedMonster.usefulSigns && (
+                      <div className="useful-signs-container">
+                        <h4 style={{ color: '#c69b61', textAlign: 'center', margin: '15px 0 10px 0', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                          <GiMagicSwirl size={24} /> Ефективні знаки:
+                        </h4>
+                        <div className="signs-row">
+                          {selectedMonster.usefulSigns.split(',').map((sign, index) => (
+                            <video 
+                              key={index}
+                              src={`/Rune/${sign.trim()}.mp4`} /* Зміни на .mov, якщо відео в mov */
+                              autoPlay 
+                              loop 
+                              muted 
+                              playsInline 
+                              className="sign-video"
+                              title={`Знак ${sign}`}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
-                  
+                
                   <div className="monster-modal-right">
                     <h2>{selectedMonster.name}</h2>
                     <div className="monster-stats">
-                      <span>❤️ Здоров'я: {selectedMonster.health}</span>
+                      <span style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
+                        <GiDrop color="#8b0000" size={20} /> Живучість: {selectedMonster.health}
+                      </span>
                     </div>
                     <div className="monster-description">
-                      <h4>📜 З нотаток відьмака:</h4>
-                      <p>{selectedMonster.description}</p>
+                      <h4 style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#c69b61' }}>
+                        <GiScrollUnfurled size={22} /> З нотаток відьмака:
+                      </h4>
+                      <p style={{ color: '#bbb' }}>{selectedMonster.description}</p>
                     </div>
+                    <div className="combat-tactics">
+<h4 style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#c69b61', margin: '0 0 10px 0' }}>
+                        <GiCrossedSwords size={22} /> Майстерність бою:
+                      </h4>                      <p>{selectedMonster.combatTactics}</p>
+                    </div>
+                      <div >
+      <span style={{ color: '#fff', fontSize: '18px', marginRight: '10px' }}>Складність:</span>
+      {[1, 2, 3, 4, 5].map((level) => (
+        <span 
+          key={level} 
+          style={{ 
+            fontSize: '22px', 
+            marginRight: '5px',
+            filter: level <= selectedMonster.difficulty ? 'none' : 'grayscale(100%) opacity(30%)',
+            transition: 'all 0.3s ease'
+          }}
+        >
+          💀
+        </span>
+      ))}
+    </div>
                   </div>
                 </div>
 

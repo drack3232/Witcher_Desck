@@ -16,10 +16,11 @@ public class Monster {
     private String name;
     private int health;
     private int reward;
+    @Column(name = "difficulty")
+    private int difficulty;
+    @Column(name = "useful_signs")
+    private String usefulSigns;
 
-    // ==========================================
-    // НОВІ ПОЛЯ ДЛЯ НАШОГО БЕСТІАРІЮ ТА ФРОНТЕНДУ
-    // ==========================================
     @Column(columnDefinition = "TEXT")
     private String description;
 
@@ -28,7 +29,6 @@ public class Monster {
 
     private String imageUrl;
 
-    // Зв'язок з локацією (Велен, Новіград і т.д.)
     @ManyToOne
     @JoinColumn(name = "location_id", nullable = false)
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
@@ -44,9 +44,7 @@ public class Monster {
         this.reward = reward;
     }
 
-    // ==========================================
-    // ТВОЯ ІГРОВА ЛОГІКА (ООП)
-    // ==========================================
+
     public void takeDamage(int damage) {
         this.health -= damage;
     }
@@ -55,7 +53,6 @@ public class Monster {
         return health > 0;
     }
 
-    // Робимо метод звичайним, щоб позбутися слова abstract
     public void showVulnerability() {
         if (combatTactics != null) {
             System.out.println("Вразливості: " + combatTactics);
@@ -64,9 +61,6 @@ public class Monster {
         }
     }
 
-    // ==========================================
-    // ГЕТТЕРИ ТА СЕТТЕРИ ДЛЯ ВСІХ ПОЛІВ
-    // ==========================================
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -90,4 +84,20 @@ public class Monster {
 
     public Location getLocation() { return location; }
     public void setLocation(Location location) { this.location = location; }
+
+    public void setDifficulty(int difficulty) {
+        this.difficulty = difficulty;
+    }
+
+    public int getDifficulty() {
+        return difficulty;
+    }
+
+    public void setUsefulSigns(String usefulSigns) {
+        this.usefulSigns = usefulSigns;
+    }
+
+    public String getUsefulSigns() {
+        return usefulSigns;
+    }
 }

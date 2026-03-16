@@ -62,6 +62,12 @@ public class DatabaseSeeder implements CommandLineRunner {
                     monster.setDescription(node.get("description").asText());
                     monster.setCombatTactics(node.get("combatTactics").asText());
                     monster.setImageUrl(node.get("imageUrl").asText());
+                    if (node.has("difficulty")) {
+                        monster.setDifficulty(node.get("difficulty").asInt());
+                    }
+                    if (node.has("usefulSigns")) {
+                        monster.setUsefulSigns(node.get("usefulSigns").asText());
+                    }
 
                     Long locId = node.get("locationId").asLong();
                     Location location = locationRepository.findById(locId).orElse(null);
